@@ -1,0 +1,13 @@
+{
+  "name": "HivePoint",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "http://hivepoint.com",
+  "keywords": [],
+  "author": "HivePoint, Inc.",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "d3": "^3.5.17"
+  }
+}

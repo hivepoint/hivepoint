@@ -1,0 +1,24 @@
+{
+  "name": "hivepoint",
+  "version": "1.0.0",
+  "description": "Hivepoint.com site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevogleAdmin/hivepoint.git"
+  },
+  "author": "HivePoint, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SevogleAdmin/hivepoint/issues"
+  },
+  "homepage": "https://github.com/SevogleAdmin/hivepoint#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  }
+}
