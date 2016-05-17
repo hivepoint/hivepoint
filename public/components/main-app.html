@@ -1,10 +1,40 @@
 <link rel="import" href="../packages/polymer/polymer.html">
+<link rel="import" href="voronoi-play.html">
 
 <dom-module id="main-app">
   <style>
+  #header {
+    background: #B71C1C;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  #logo {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1600px;
+  }
+  .contentBody {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 5px;
+  }
   </style>
   <template>
-    <h1>{{foo}}</h1>
+    <div id="header" class="vertical layout">
+      <div class="flex"></div>
+      <div style="padding: 5px;">
+        <img id="logo" src="../images/logo_white.png">
+      </div>
+      <div class="flex"></div>
+      <div id="voronoiContainer" class="fillContainer">
+        <voronoi-play width="{{vSize.width}}" height="{{vSize.height}}"></voronoi-play>
+      </div>
+    </div>
+    <div class="contentBody">
+      <p>Lorem ipsum dolor sit amet, duis facilisis eu, condimentum et mollis risus viverra adipiscing tristique. A ultricies, augue nibh scelerisque turpis consequat. Sapien id dui nulla quam viverra erat, sit sed, purus pulvinar amet justo. Dui nam at justo, ultricies id facilisis est non. Et vitae eget mi, pede sit duis orci eros corrupti. Tellus sem id eget nam vel pede. Sed purus pharetra in sollicitudin suspendisse pellentesque, nec risus arcu nonummy, curabitur hymenaeos eu. Rutrum aliquet, et sit ut integer praesent sit cras, aliquet molestie pellentesque neque quam luctus odio, donec duis ornare id wisi nunc arcu, nec in et quisque ut massa egestas. Arcu venenatis. Eu aenean, dignissim placerat eu semper a. Nunc aliquam donec metus odio massa, quo mauris, rhoncus nunc donec ipsum ornare, lacinia molestie phasellus elit augue odio euismod, adipiscing eros ante massa libero id ligula.</p>
+    </div>
   </template>
   <script src="main-app.js"></script>
 </dom-module>
