@@ -34,7 +34,8 @@ HivepointServer.prototype.handlePingRequest = function(request, response) {
   response.setHeader('Content-Type', 'application/json');
   response.setHeader('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
   var result = {
-    status: this.serverStatus
+    product: 'HivePoint',
+    status: 'OK'
   };
   response.send(JSON.stringify(result));
 };
