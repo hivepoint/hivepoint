@@ -1,0 +1,24 @@
+{
+  "domain": "hivepoint.com",
+  "serverId":  "DEV",
+  "baseClientUri": "http://localhost:31113",
+  "ssl": {
+    "ca": "/usr/local/etc/certs/caBundle",
+    "key": "/usr/local/etc/certs/server.key",
+    "cert": "/usr/local/etc/certs/server.crt"
+  },
+  "client": {
+    "enabled": true,
+    "ssl": false,
+    "port": 31113,
+    "noCaching": false,
+    "analytics": false
+  },
+  "debug": {
+    "clientSessions": {
+      "logMessages": true
+    }
+  },
+  "devMode": true,
+  "restrictAccess": false
+}
