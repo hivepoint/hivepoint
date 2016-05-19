@@ -1,5 +1,6 @@
 <link rel="import" href="../packages/polymer/polymer.html">
 <link rel="import" href="voronoi-play.html">
+<link rel="import" href="main-app-section.html">
 
 <dom-module id="main-app">
   <style>
@@ -16,9 +17,38 @@
     max-width: 1600px;
   }
   .contentBody {
-    max-width: 800px;
-    margin: 40px auto;
+    max-width: 850px;
+    margin: 20px auto;
     padding: 5px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  b {
+    font-weight: 400;
+    color: #B71C1C;
+  }
+  #customerProduct {
+    background-color: var(--cp-background);
+    padding: 2px 5px;
+  }
+  button {
+    font-size: 18px;
+    padding: 8px 10px;
+    border: none;
+    background: #B71C1C;
+    color: white;
+    outline: none;
+    text-transform: uppercase;
+    display: inline-block;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+  }
+  main-app-section {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
   }
   </style>
   <template>
@@ -33,7 +63,41 @@
       </div>
     </div>
     <div class="contentBody">
-      <p>Lorem ipsum dolor sit amet, duis facilisis eu, condimentum et mollis risus viverra adipiscing tristique. A ultricies, augue nibh scelerisque turpis consequat. Sapien id dui nulla quam viverra erat, sit sed, purus pulvinar amet justo. Dui nam at justo, ultricies id facilisis est non. Et vitae eget mi, pede sit duis orci eros corrupti. Tellus sem id eget nam vel pede. Sed purus pharetra in sollicitudin suspendisse pellentesque, nec risus arcu nonummy, curabitur hymenaeos eu. Rutrum aliquet, et sit ut integer praesent sit cras, aliquet molestie pellentesque neque quam luctus odio, donec duis ornare id wisi nunc arcu, nec in et quisque ut massa egestas. Arcu venenatis. Eu aenean, dignissim placerat eu semper a. Nunc aliquam donec metus odio massa, quo mauris, rhoncus nunc donec ipsum ornare, lacinia molestie phasellus elit augue odio euismod, adipiscing eros ante massa libero id ligula.</p>
+      <p>
+        You finally get a prospect in front of your <span id="customerProduct">{{customerProduct.name}}</span>.<br>
+        You have 90 seconds to wow them. Static text, images, and even videos no longer cut it.
+        We believe that <b>interactivity engages</b>.
+      </p>
+      
+      <div id="sections">
+        <template is="dom-repeat" items="{{sections}}">
+          <main-app-section id$="{{getSectionId(item.id)}}" item="{{item}}" control="{{getControl(item.id)}}"></main-app-section>
+        </template>
+      </div>
+      
+      <div id="buttonsPanel">
+        <template is="dom-repeat" items="{{buttons}}">
+          <button on-tap="onButtonTap">{{item.text}}</button>
+        </template>
+      </div>
+    </div>
+    
+    <div id="lymePanel">
+      <div>The Centers for Disease Control and Prevention <a href="http://www.cdc.gov/lyme/stats/index.html" target="_blank">showed</a> growth of Lyme Disease over time
+      as a series of static images.</div>
+      <div style="text-align: center; margin-top: 10px;">
+        <a href="http://www.cdc.gov/lyme/stats/index.html" target="_blank" style="border: none;"><img style="display: inline-block; max-width: 100%; box-sizing: border-box;" src="../images/cdc-lyme.jpg"></a>
+      </div>
+      <p>
+        In an <a href="https://braid.io/tile/lyme-disease-trends" target="_blank">article in Braid magazine</a>, 
+        we presented the same data as an interactive embeddable map where the reader can drill into their own county  to get county specific data.
+      </p>
+      <div class="braid-tile" data-tile="lyme-disease-trends-map" style="background: white;"></div>
+      <script src="//braid.io/embed/embedder.js" async></script>
+    </div>
+    
+    <div id="contactPanel" style="display: none;">
+      We're based in Palo Alto, CA. Send us an email <a href="mailto:info@hivepoint.com">info@hivepoint.com</a>
     </div>
   </template>
   <script src="main-app.js"></script>

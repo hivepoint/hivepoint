@@ -57,7 +57,6 @@ Polymer({
         this.redraw();
       }.bind(this));
       this.drag.on("dragend", function(d, i) {
-        this.currentDragging = -1;
         this.userDragging =  false;
         this.async(function() {
           this.startAnimation();
@@ -127,7 +126,6 @@ Polymer({
             this.startAnimation();
           }
         }, 1000);
-        this.currentDragging = -1;
         return;
       } else {
         var x = this.animationSeedSrc[0] + ((this.animationSeedDst[0] - this.animationSeedSrc[0]) * pct);
@@ -137,7 +135,9 @@ Polymer({
         window.requestAnimationFrame(tick);
       }
     }.bind(this);
-    this.currentDragging = Math.floor(Math.random() * this.seeds.length);
+    if (this.currentDragging < 0) {
+      this.currentDragging = Math.floor(Math.random() * this.seeds.length);
+    }
     this.animationSeedSrc = [this.seeds[this.currentDragging][0], this.seeds[this.currentDragging][1]];
     this.animationSeedDst = [Math.floor(Math.random() * this.width), Math.floor(Math.random() * this.height)];
     window.requestAnimationFrame(tick);
