@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/SevogleAdmin/hivepoint#readme",
   "dependencies": {
+    "command-line-args": "^2.1.6",
+    "compression": "^1.6.2",
     "express": "^4.13.4",
     "http": "0.0.0",
     "path": "^0.12.7"
