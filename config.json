@@ -12,7 +12,8 @@
     "ssl": false,
     "port": 31113,
     "noCaching": false,
-    "analytics": false
+    "analytics": false,
+    "maxAge": 86400000
   },
   "debug": {
     "clientSessions": {
