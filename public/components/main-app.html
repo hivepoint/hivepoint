@@ -82,7 +82,8 @@
       </div>
     </div>
     
-    <div id="lymePanel">
+    
+    <div id="lymePanel" style="display: none;">
       <div>The Centers for Disease Control and Prevention <a href="http://www.cdc.gov/lyme/stats/index.html" target="_blank">showed</a> growth of Lyme Disease over time
       as a series of static images.</div>
       <div style="text-align: center; margin-top: 10px;">
@@ -92,12 +93,45 @@
         In an <a href="https://braid.io/tile/lyme-disease-trends" target="_blank">article in Braid magazine</a>, 
         we presented the same data as an interactive embeddable map where the reader can drill into their own county  to get county specific data.
       </p>
-      <div class="braid-tile" data-tile="lyme-disease-trends-map" style="background: white;"></div>
-      <script src="//braid.io/embed/embedder.js" async></script>
+      
+      
+    </div>
+    
+    <div id="whatisPanel" style="display: none;">
+      <p>
+        We are a small team that is passionate about building a fully interactive web.
+        We are the people behind <a href="https://braid.io" target="_blank">Braid magazine</a> which provides us with a way to use interactivity to tell interesting stories in a new way.
+        The expertise and tools we have developed enable us to assist companies that share our view that the future of the web is through deep interactivity.
+      </p>
+      <p>We work on contracts where we can use our creative and technical skills to help to solve challenging problems.</p>
     </div>
     
     <div id="contactPanel" style="display: none;">
       We're based in Palo Alto, CA. Send us an email <a href="mailto:info@hivepoint.com">info@hivepoint.com</a>
+    </div>
+    
+    <div id="gitmoPanel" style="display: none;">
+      <p>
+        Communicating with people is about telling stories. In the past, that meant writing. For example,
+        when 9 prisoners were recently released from the Guantanamo Bay prison, the Guardian wrote
+        <a href="http://www.theguardian.com/us-news/2016/apr/16/guantanamo-bay-prisoners-released-yemen-saudi-arabia" target="_blank">this 1000 word story</a> about it.
+      </p> 
+      <p>
+        We told <a href="https://braid.io/tile/guantanamo-bay-detainees" target="_blank">the story of the Guantanamo Bay detainees</a>
+        by using interactive graphics to let readers visualize and explore the data.
+      </p>
+      <div class="horizontal layout center" style="text-align: center;">
+        <h3 class="flex">Traditional story</h3>
+        <h3 class="flex">Interactive story</h3>
+      </div>
+      <div class="horizontal layout" style="text-align: center;">
+        <div style="padding-right: 5px;" class="flex">
+          <img style="display: block; width: 100%; height: auto;" src="../images/gitmo-guardian.jpg">
+        </div>
+        <div class="flex">
+          <iframe src="//braid.io/embed-tile/gitmo-detainees-embed" frameborder="0" style=" display: block; box-sizing: border-box; border: 0px none; width: 100%; height: 517px; background: white;"></iframe>
+        </div>
+      </div>
     </div>
   </template>
   <script src="main-app.js"></script>

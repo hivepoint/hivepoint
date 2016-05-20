@@ -125,7 +125,7 @@ Polymer({
           if (!this.userDragging) {
             this.startAnimation();
           }
-        }, 1000);
+        });
         return;
       } else {
         var x = this.animationSeedSrc[0] + ((this.animationSeedDst[0] - this.animationSeedSrc[0]) * pct);

@@ -21,7 +21,7 @@ Polymer({
     this.customerProductIndex = -1;
     
     this.sectionTypes = [
-      {id: "what", text: "What is HivePoint?", color: "#E3F2FD", description: "We’re a small team of elite developers passionate about interactive user interfaces.  We're experts in rapid development of engaging, interactive, fully operational end-to-end user-facing systems."},
+      {id: "what", text: "What is HivePoint?", color: "#E3F2FD"},
       {id: "ex1", text: "Give me an example", color: "#EFEBE9"},
       {id: "how", text: "How we work", color: "#FFEBDE", description: "You identify a user-facing system, start with something small.  We re-conceptulize and implement an interactive version."},
       {id: "contact", text: "Contact us", color: "#E8F5E9"},
@@ -33,7 +33,8 @@ Polymer({
   attached: function() {
     this.controls = {
       "contact": this.$.contactPanel,
-      "ex1": this.$.lymePanel
+      "what": this.$.whatisPanel,
+      "ex1": this.$.gitmoPanel
     },
     
     this.refreshLayout();
