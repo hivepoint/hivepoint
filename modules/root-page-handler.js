@@ -33,13 +33,13 @@ RootPageHandler.prototype.initializeApp = function(app, server) {
 
 RootPageHandler.prototype._handleRootPageRequest = function(app, server, request, response) {
   response.setHeader('Content-Type', 'text/html');
-  // response.setHeader('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
-  if (!config || !config.data || !config.data.client || config.data.client && !config.data.client.noCaching) {
-    var maxAge = 60 * 10;
-    if (config && config.data && config.data.client && config.data.client.rootMaxAge) {
-      response.setHeader('Cache-Control', 'public, max-age=' + config.data.client.rootMaxAge);      
-    }
-  }
+  response.setHeader('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
+  // if (!config || !config.data || !config.data.client || config.data.client && !config.data.client.noCaching) {
+  //   var maxAge = 60 * 10;
+  //   if (config && config.data && config.data.client && config.data.client.rootMaxAge) {
+  //     response.setHeader('Cache-Control', 'public, max-age=' + config.data.client.rootMaxAge);      
+  //   }
+  // }
 
   var ogType = 'website';
   var ogUrl = config.data.baseClientUri;
