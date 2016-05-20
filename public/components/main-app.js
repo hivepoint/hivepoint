@@ -23,7 +23,8 @@ Polymer({
     this.sectionTypes = [
       {id: "what", text: "What is HivePoint?", color: "#E3F2FD"},
       {id: "ex1", text: "Give me an example", color: "#EFEBE9"},
-      {id: "how", text: "How we work", color: "#FFEBDE", description: "You identify a user-facing system, start with something small.  We re-conceptulize and implement an interactive version."},
+      {id: "how", text: "How we work", color: "#FFEBDE"},
+      {id: "ex2", text: "Another example?", color: "#EDE7F6"},
       {id: "contact", text: "Contact us", color: "#E8F5E9"},
       {id: "team", text: "Meet our team", color: "#ECEFF1", description: "This is our team"},
     ];
@@ -34,7 +35,10 @@ Polymer({
     this.controls = {
       "contact": this.$.contactPanel,
       "what": this.$.whatisPanel,
-      "ex1": this.$.gitmoPanel
+      "how": this.$.howPanel,
+      "ex1": this.$.gitmoPanel,
+      ex2: this.$.lymePanel,
+      team: this.$.teamPanel
     },
     
     this.refreshLayout();
