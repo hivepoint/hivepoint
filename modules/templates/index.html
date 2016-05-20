@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta charset="UTF-8">
+	<meta name="description" content="Experts in user interface concepts, design, and implementation" />
+	<title>HivePoint</title>
+
+	{{&ogdata}}
+
+	<link rel="icon" href="{{&static_base}}/images/hivepoint_logo_16x16.png" type="image/png">
+
+	<script src="{{&static_base}}/packages/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="{{&static_base}}/hivepoint.css">
+	<link rel="import" href="{{&static_base}}/components/main-app.html" async> 
+	
+	{{&other_scripts}}
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		if (window.location.hostname === 'hivepoint.com') {
+			ga('create', 'UA-52117709-1', 'auto');
+			ga('send', 'pageview');
+		}
+	</script>
+</head>
+
+<body>
+	<main-app></main-app>
+
+	<div style="height:0;overflow:hidden;">
+		<section>
+			<h1>HivePoint</h1>
+			<p>You finally get a prospect in front of your website, sales presentation, product, or product demo. You have 90 seconds to wow them. Static text, images, and even videos no longer cut it. We believe that interactivity engages.</p>
+		</section>
+		<section>
+			<h2>What is HivePoint?</h2>
+			<p>We are a small team that is passionate about building fully interactive user interfaces. We're experts in rapid development of engaging, interactive, fully operational end-to-end user-facing systems using the latest web technologies.
+			</p>
+		</section>
+		<section>
+			<h2>Show me an example</h2>
+			<p>We are the people behind <a href='https://braid.io'>Braid magazine</a> which provides us with a way to use interactivity to tell interesting stories in a new way.</p>
+			<p>Communicating with people is about telling stories. In the past, that meant writing. For example, when 9 prisoners were recently released from the Guantanamo Bay prison, the Guardian wrote this 1000 word story about it.</p>
+			<p>We told the story of the Guantanamo Bay detainees by using interactive graphics to let readers visualize and explore the data.</p>
+		</section>
+		<section>
+			<h2>How we work</h2>
+			<p>Your website, product, or sales presentation tells a story. We work on contract to help make it more engaging through interactivity.</p>
+			<p>We prefer to start small. You identify part of an existing user-facing system and we'll offer a proposal on how to increase its interactivity.</p>
+			<p>We then rapidly prototype a solution and deliver it (typically in days or weeks) in the way that best fits the situation. In many cases, what we deliver can be dropped into an existing resource (like a website or presentation) with minimum disruption.</p>
+		</section>
+		<section>
+			<h2>Show me another example</h2>
+			<p>On the left is a well written 700 word article from Science Magazine about the spread of Lyme Disease. It even includes a map.</p>
+			<p>On the right you see how we tell this same story - eliminating most of the reading and inviting the reader to explore the data interactively.</p>
+			<p>We can take these same concepts and apply them to your problem, improving your customer's experience.</p>
+		</section>
+		<section>
+			<h2>Contact us</h2>
+			<p>HivePoint is located in Palo Alto, California.</p>
+			<p>To reach us, send us a tweet at <a href='https://twitter.com/HivePoint'>@HivePoint</a>, or an email to <a href='mailto:contact@hivepoint.com'>contact@hivepoint.com</a>.</p>
+			<h2>Meet the team</h2>
+			<p>Kingston Duffie is a serial entrepreneur in Silicon Valley. Before starting HivePoint, he was founder and CTO at WhiteTree (now part of Alcatel-Lucent), Turnstone (IPO in 2000), and Fanfare (now part of Spirent).</p>
+			<p>Preet Shihn is a master of user experience design and implementation. After graduating from the University of Waterloo, he joined Fanfare and then became a co-founder of HivePoint.</p>
+			<p>Carl Hubbard is an expert in project management has led engineering teams at Turnstone, Fanfare, and Silver Peak before joining HivePoint.</p>
+			<p>Nathan Neulinger designs, implements, and manages all of HivePoint's cloud resources.</p>
+		</section>
+	</div>
+</body>
+
+</html>

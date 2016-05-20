@@ -3,9 +3,11 @@
 var fs = require('fs');
 var path = require('path');
 var cliArgs = require("command-line-args");
+var config = require('./modules/config');
 
-var Server = require("./hivepoint-server-class");
+var server = require("./modules/hivepoint-server-class");
 
+var VERSION = 1;
 
 function start() {
   /* define the command-line options */
@@ -34,26 +36,19 @@ function start() {
     console.log(usage);
     process.exit();
   }
+  
+  if (!options.version) {
+    options.version = VERSION;
+  }
 
-  var configPath = path.join(__dirname, 'config.json');
+  var configPath = path.join(__dirname, 'modules/config.json');
   if (options.config) {
     configPath = options.config;
   }
-  console.log("Reading configuration from " + configPath);
-  fs.readFile(configPath, 'utf8', function (err, data) {
-    if (err) {
-      console.log(err);
-      process.exit();
-    }
-    var config = JSON.parse(data);
-    if (options.domain) {
-      config.domain = options.domain;
-    }
+
+  config.initialize(configPath, options, function() {
     console.log("HivePoint server initializing");
-    console.log("Configuration", config);
-    var server = new Server();
-    server.initialize(config);
-    server.start(function (err) {
+    server.initialize(function (err) {
       if (err) {
         console.log("Error starting: " + err);
         process.exit();
