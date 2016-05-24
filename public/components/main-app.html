@@ -24,6 +24,14 @@
     font-weight: 300;
     line-height: 1.5em;
   }
+  .contentBodyCompact {
+    max-width: 850px;
+    margin: 0 auto 10px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em;
+  }
   b {
     font-weight: 400;
     color: #B71C1C;
@@ -43,6 +51,7 @@
     display: inline-block;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
     cursor: pointer;
+    margin-top: 10px;
   }
   main-app-section {
     height: 0;
@@ -62,7 +71,7 @@
         <voronoi-play width="{{vSize.width}}" height="{{vSize.height}}"></voronoi-play>
       </div>
     </div>
-    <div class="contentBody">
+    <div class$="{{contentStyle}}">
       <p>
         You finally get a prospect in front of your <span id="customerProduct">{{customerProduct.name}}</span>.<br>
         You need to wow them. Static text, images, and even videos no longer cut it.

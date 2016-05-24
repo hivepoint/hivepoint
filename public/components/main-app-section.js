@@ -16,7 +16,9 @@ Polymer({
   
   refresh: function() {
     if (this._attached && this.item) {
+      this.compactMode = window.innerWidth <= 500;
       this.customStyle['--section-background'] = this.item.color;
+      this.customStyle['--section-font-size'] = this.compactMode ? "16px" : "20px"
       this.updateStyles();
       
       if (this.control) {

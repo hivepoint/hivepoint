@@ -23,6 +23,8 @@ Polymer({
     var cellRandomness = 200;
     this.userDragging =  false;
     if (this._attached && this.width && this.height) {
+      this.compactMode = this.width <= 500;
+      
       this.clearElement(this.$.container);
       this.svg = d3.select(this.$.container).append("svg")
                   .attr("width", this.width)
@@ -119,7 +121,7 @@ Polymer({
       }
       if (!this.animationStart) this.animationStart = timestamp;
       var progress = timestamp - this.animationStart;
-      var pct = progress / 5000;
+      var pct = progress / (this.compactMode ? 3000 : 5000);
       if (pct >= 1) {
         this.async(function() {
           if (!this.userDragging) {

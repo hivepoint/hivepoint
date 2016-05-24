@@ -8,6 +8,10 @@ Polymer({
     sections: {
       type: Array,
       value: function() { return []; }
+    },
+    contentStyle: {
+      type: String,
+      value: 'contentBody'
     }
   },
   
@@ -57,7 +61,8 @@ Polymer({
   },
   
   refreshLayout: function() {
-    var bch = Math.min(window.innerHeight * 0.65, 800);
+    this.compactMode = window.innerWidth <= 500;
+    var bch = Math.min(window.innerHeight * (this.compactMode ? 0.4 : 0.65), 800);
     this.$.header.style.minHeight = bch + "px";
     this.async(function() {
       this.set("vSize", {
@@ -65,6 +70,7 @@ Polymer({
         height: this.$.header.offsetHeight
       });
     }, 50);
+    this.set("contentStyle", this.compactMode ? "contentBodyCompact" : "contentBody");
   },
   
   nextCustomerProduct: function() {
@@ -109,7 +115,7 @@ Polymer({
       if (node) {
         if (d.id == item.id) {
           node.style.height = "auto";
-          node.style.marginBottom = "40px";
+          node.style.marginBottom = this.compactMode ? "20px" : "40px";
           node.style.opacity = 1;
           currentNode = node;
         } else {
