@@ -12,6 +12,10 @@ Polymer({
     contentStyle: {
       type: String,
       value: 'contentBody'
+    },
+    exampleEmbedPanelClass: {
+      type: String,
+      value: "horizontal layout"
     }
   },
   
@@ -71,6 +75,7 @@ Polymer({
       });
     }, 50);
     this.set("contentStyle", this.compactMode ? "contentBodyCompact" : "contentBody");
+    this.set("exampleEmbedPanelClass", this.compactMode ? "vertical layout" : "horizontal layout");
   },
   
   nextCustomerProduct: function() {
