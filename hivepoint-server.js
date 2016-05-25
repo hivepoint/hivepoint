@@ -7,7 +7,7 @@ var config = require('./modules/config');
 
 var server = require("./modules/hivepoint-server-class");
 
-var VERSION = 4;
+var VERSION = 5;
 
 function start() {
   /* define the command-line options */
