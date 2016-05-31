@@ -4,6 +4,7 @@ var http = require('http');
 var async = require('async');
 var compress = require('compression');
 var config = require('./config');
+var url = require('url');
 
 var rootPageHandler = require('./root-page-handler');
 
@@ -64,6 +65,11 @@ HivepointServer.prototype.handlePingRequest = function(request, response) {
     status: 'OK'
   };
   response.send(JSON.stringify(result));
+};
+
+HivepointServer.prototype.resolveStaticUrl = function(value) {
+ var baseUrl = url.resolve(config.data.baseClientUri, this.staticBase + "/");
+ return url.resolve(baseUrl, value);
 };
 
 var server = new HivepointServer();

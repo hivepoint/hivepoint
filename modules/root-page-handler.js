@@ -46,18 +46,27 @@ RootPageHandler.prototype._handleRootPageRequest = function(app, server, request
 
   var og = {
     title: "HivePoint",
-    description: "Experts in User Interface Interactivity"
+    description: "Experts in User Interface Interactivity",
+    image: server.resolveStaticUrl("images/hivepoint.jpg"),
+    imageWidth: 750,
+    imageHeight: 750
   };
   var ogHeaders = '<meta property="og:title" content="' + og.title + '" />\n';
   ogHeaders += '<meta property="og:description" content="' + og.description + '" />\n';
   ogHeaders += '<meta property="og:type" content="' + ogType + '" />\n';
   ogHeaders += '<meta property="og:url" content="' + ogUrl + '" />\n';
+  ogHeaders += '<meta property="og:image" content="' + og.image + '" />\n';
+  ogHeaders += '<meta property="og:image:width" content="' + og.imageWidth + '" />\n';
+  ogHeaders += '<meta property="og:image:height" content="' + og.imageHeight + '" />\n';
 
   // Twitter card
   ogHeaders += '<meta name="twitter:card" content="summary">\n';
   ogHeaders += '<meta name="twitter:site" content="@HivePoint">\n';
   ogHeaders += '<meta name="twitter:title" content="' + og.title + '">\n';
   ogHeaders += '<meta name="twitter:description" content="' + og.description + '">\n';
+  ogHeaders += '<meta name="twitter:image" content="' + og.image + '">\n';
+  ogHeaders += '<meta name="twitter:image:width" content="' + og.imageWidth + '">\n';
+  ogHeaders += '<meta name="twitter:image:height" content="' + og.imageHeight + '">\n';
 
   var otherScripts = "";
   var userAgent = request.headers['user-agent'];
