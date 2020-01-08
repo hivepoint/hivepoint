@@ -1,2 +1,2 @@
 # hivepoint
-HIvepoint.com site
+Hivepoint.com site
