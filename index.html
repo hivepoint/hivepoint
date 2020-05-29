@@ -7,7 +7,7 @@
   <title>HivePoint</title>
   <meta name="description"
     content="We're the company behind the Slickstream Engagement Suite and Slick Stories, products designed to increase on-site engagement for publishers.">
-  <link rel="icon" href="images/favpink.png" type="image/png">
+  <link rel="icon" href="images/fav.png" type="image/png">
 
   <meta property="og:title" content="HivePoint">
   <meta property="og:description"
@@ -31,9 +31,9 @@
       font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
       margin: 0;
       line-height: 1.6;
-      background: #e91e63;
-      background-color: #e91e63;
-      background-image: url(/images/bg2.png);
+      background: #1565C0;
+      background-color: #1565C0;
+      background: url(/images/bg-grid.png), linear-gradient(320deg, #27a4de, #1565C0);
       min-height: 100vh;
       letter-spacing: 0.25px;
       padding: 32px 0;
@@ -61,15 +61,12 @@
     a:visited {
       text-decoration: none;
       outline: none;
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      vertical-align: middle;
-      background: #e91e63;
-      color: white;
-      padding: 8px;
-      margin: 16px 0 0;
-      border-radius: 3px;
+      color: #1565C0;
+      font-weight: bold;
+    }
+
+    a:hover {
+      box-shadow: 0 2px;
     }
 
     header img {
@@ -93,13 +90,28 @@
       flex-basis: 0.000000001px;
     }
 
-    a img {
+    button {
+      outline: none;
+      cursor: pointer;
+      background: #1565C0;
+      color: white;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      border: none;
+      padding: 10px 16px;
+      margin: 24px 0 0 0;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    button img {
       display: block;
       height: 1.8em;
       margin: 0 8px 0 0;
     }
 
-    a span {
+    button span {
       white-space: nowrap;
       display: block;
       letter-spacing: 1.5px;
@@ -130,7 +142,7 @@
 <body>
   <article>
     <header>
-      <img alt="HivePoint logo" src="/images/logo-pink.png">
+      <img alt="HivePoint logo" src="/images/logo-blue.png">
       <h1>HivePoint</h1>
     </header>
     <main>
@@ -143,10 +155,12 @@
         growth is creating a great user experience, and we help websites and blogs to do just that.
       </p>
       <p>
-        To learn more, visit <br>
+        To learn more, visit <a href="https://www.slickstream.com/">slickstream.com</a><br>
         <a href="https://www.slickstream.com/">
-          <img id="slicklogo" alt="Slickstream logo" src="/images/slicklogo.png">
-          <span>SLICKSTREAM.COM</span>
+          <button>
+            <img id="slicklogo" alt="Slickstream logo" src="/images/slicklogo.png">
+            <span>SLICKSTREAM.COM</span>
+          </button>
         </a>
       </p>
     </main>
