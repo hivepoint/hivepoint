@@ -4,118 +4,154 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-  <title>Hivepoint</title>
-  <meta name="description" content="Creators of https://www.slickstream.com">
-  <link rel="icon" href="/images/sfav.png" type="image/png">
-  <meta property="og:title" content="Hivepoint">
-  <meta property="og:description" content="Creators of https://www.slickstream.com">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="Creators of https://hivepoint.com">
-  <meta property="og:image" content="/images/logo.png">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="540">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@SlickstreamHQ">
-  <meta name="twitter:title" content="Hivepoint">
-  <meta name="twitter:description" content="Creators of https://www.slickstream.com">
-  <meta name="twitter:image" content="/images/logo.png">
-  <meta name="twitter:image:width" content="1024">
-  <meta name="twitter:image:height" content="540">
+  <title>HivePoint</title>
+  <meta name="description"
+    content="A small JavaScript library to create and animate hand-drawn annotations on a web page">
+  <link rel="icon" href="images/fav.png" type="image/png">
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <meta property="og:title" content="HivePoint">
+  <meta property="og:description"
+    content="A small JavaScript library to create and animate hand-drawn annotations on a web page">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://HivePoint.com/">
+  <meta property="og:image" content="https://HivePoint.com/images/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="669">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HivePoint">
+  <meta name="twitter:description"
+    content="A small JavaScript library to create and animate hand-drawn annotations on a web page">
+  <meta name="twitter:image" content="https://HivePoint.com/images/social.png">
+  <meta name="twitter:image:width" content="1280">
+  <meta name="twitter:image:height" content="669">
 
   <style>
     body {
-      margin: 0;
-      font-weight: 400;
-      line-height: 1.756;
-      font-size: 18px;
+      font-size: 20px;
       font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-      -webkit-font-smoothing: subpixel-antialiased;
+      margin: 0;
+      line-height: 1.6;
+      background-color: #1565C0;
+      color: #ffffff;
+      background: #1565C0;
+      background: url(/images/bg-grid.png), linear-gradient(320deg, #27a4de, #1565C0);
+      min-height: 100vh;
+      letter-spacing: 0.25px;
+    }
+
+    article {
+      max-width: 632px;
+      padding: 16px;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
 
     header {
-      text-align: center;
-      font-family: 'Raleway', sans-serif;
-      background: #1565C0;
-      color: white;
-      padding: 60px 16px;
-    }
-
-    h1 {
-      font-weight: 400;
-      margin: 0;
-      letter-spacing: 2px;
-      font-size: 40px;
-    }
-
-    h2 {
-      font-weight: 400;
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 1px;
-      margin-top: 10px;
-    }
-
-    header a,
-    header a:visited {
-      color: inherit;
-      text-decoration: none;
-      outline: none;
-      display: inline-block;
-    }
-
-    header a:hover {
-      box-shadow: 0 2px;
-    }
-
-    main {
-      max-width: 600px;
-      padding: 32px 16px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
 
     a,
     a:hover,
     a:visited {
-      color: #e91e63;
+      color: inherit;
+      text-decoration: none;
       outline: none;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      vertical-align: middle;
     }
 
-    button {
-      background: #e91e63;
-      color: white;
-      cursor: pointer;
-      outline: none;
-      border: none;
-      font-family: inherit;
-      font-size: 15px;
-      letter-spacing: 1px;
-      padding: 10px 16px;
-      border-radius: 3px;
+    header img {
+      height: 60px;
+      width: auto;
+      display: block;
+      margin-right: 16px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    .flex {
+      -ms-flex: 1 1 0.000000001px;
+      -webkit-flex: 1;
+      flex: 1;
+      -webkit-flex-basis: 0.000000001px;
+      flex-basis: 0.000000001px;
+    }
+
+    a img {
+      display: block;
+      height: 1.8em;
+      margin: 0 8px;
+    }
+
+    a span {
+      white-space: nowrap;
+      display: block;
+      letter-spacing: 1.5px;
+      line-height: 1.3;
+      box-shadow: 0 2px #fff;
+    }
+
+    footer {
+      font-size: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin-top: 100px;
+      padding: 32px 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media(max-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+
+      a {
+        margin: 8px 0 0;
+      }
     }
   </style>
-
 </head>
 
 <body>
-  <header>
-    <h1>Hivepoint</h1>
-    <h2>Get the most out of your website with <a href="https://www.slickstream.com/">Slickstream</a></h2>
-  </header>
-  <main>
-    <p>
-      Hivepoint is the creator of <a href="https://www.slickstream.com/">Slickstream</a>. We are a startup located in
-      Palo Alto, California. We believe that giving website visitors a great experience is the
-      best way to steadily build traffic volume over time, and we work with publishers to help them achieve that goal.
-    </p>
-
-    <p>
-      <a href="https://www.slickstream.com/">
-        <button>Learn more about Slickstream</button>
-      </a>
-    </p>
-  </main>
+  <article>
+    <header>
+      <img alt="HivePoint logo" src="/images/logo.png">
+      <h1>HivePoint</h1>
+    </header>
+    <main>
+      <p>
+        Welcome to Hivepoint! We're the company behind the Slickstream Engagement Suite and Slick Stories, products
+        designed to increase on-site engagement for publishers.
+      </p>
+      <p>
+        Our philosophy is simple: the key to organic, long-term
+        growth is creating a great user experience, and we help websites and blogs to do just that.
+      </p>
+      <p>
+        To learn more, check out
+        <a href="https://www.slickstream.com/">
+          <img id="slicklogo" alt="Slickstream logo" src="/images/slicklogo.png">
+          <span>SLICKSTREAM.COM</span>
+        </a>
+      </p>
+    </main>
+    <footer>
+      <div>© 2020 HivePoint Inc.</div>
+      <div class="flex"></div>
+      <div>
+        <div>2170 Staunton Ct.</div>
+        <div>Palo Alto, CA, 94306</div>
+      </div>
+    </footer>
+  </article>
 </body>
 
 </html>
